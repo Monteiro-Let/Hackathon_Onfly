@@ -5,7 +5,7 @@ function Header() {
         <header>
             <nav className="bg-off_white w-full p-4 flex flex-col lg:flex-row items-center lg:justify-between shadow-md">
                 <div className="flex-shrink-0 mb-4 lg:mb-0">
-                    <img src={logo} alt="Logo Onfly" className="h-15" />
+                    <img src={logo} alt="Logo Onfly" className="h-15 pl-0 lg:pl-14" />
                 </div>
                 <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
                     <div className="text-dark_medium_blue w-full lg:w-auto">
