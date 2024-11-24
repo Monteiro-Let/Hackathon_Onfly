@@ -1,7 +1,9 @@
-/* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { HotelContext } from "../../context/HotelContext";
 
-function HotelFilters({ onFilter }) {
+function HotelFilters() {
+  const { setFilteredHotels } = useContext(HotelContext);
+
   const [selectedCategory, setSelectedCategory] = useState("");
   const [city, setCity] = useState("");
 
@@ -17,11 +19,11 @@ function HotelFilters({ onFilter }) {
   const handleCategoryClick = (category) => {
     if(selectedCategory === category) return setSelectedCategory("");
     setSelectedCategory(category);
-    onFilter({ category, city });
+    setFilteredHotels({ category, city });
   };
 
   const handleSearch = () => {
-    onFilter({ category: selectedCategory, city });
+    setFilteredHotels({ category: selectedCategory, city });
   };
 
   return (
