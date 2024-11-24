@@ -12,6 +12,7 @@ export default {
         medium_blue: '#267ffa',
         dark_blue: '#192a3d',
         dark_medium_blue:'#1f6391',
+        hover_orange: '#cc4a04',
         orange: '#ff5a05'
       }
     },
