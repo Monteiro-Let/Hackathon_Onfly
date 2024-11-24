@@ -2,19 +2,27 @@ import image from "../../assets/Image-Onfly.png";
 
 function Banner() {
     return (
-        <section className="mt-12 w-screen">
-            <div className="bg-white h-100 flex items-center justify-center gap-24 font-medium">
-                <div className="text-justify pl-5 text-font_dark_blue">
-                    <h1 className="text-4xl pt-10 tracking-wide">
-                        <strong>Encontre o hotel</strong><br></br>
-                        ideal para sua<br></br>viagem corporativa!
+        <section className="mt-12 w-screen px-4">
+            <div className="bg-white flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-32 font-semibold">
+                <div className="text-center lg:text-left px-4 lg:pl-20 text-font_dark_blue leading-relaxed lg:leading-loose">
+                    <h1 className="text-3xl lg:text-4xl font-bold tracking-wide">
+                        Encontre o hotel<br />
+                        ideal para sua<br /> viagem corporativa!
                     </h1>
-                    <p className="pt-2">Descubra onde oferecemos nossos serviços!</p>
+                    <p className="pt-4 text-base lg:text-lg">
+                        Descubra onde oferecemos nossos serviços!
+                    </p>
                 </div>
-                <img src={image} className="h-45" />
+                <div className="flex justify-center lg:justify-end">
+                    <img 
+                        src={image} 
+                        alt="Imagem representando viagens corporativas" 
+                        className="w-full max-w-md lg:max-w-lg object-contain"
+                    />
+                </div>
             </div>
         </section>
-    )
+    );
 }
 
 export default Banner;
