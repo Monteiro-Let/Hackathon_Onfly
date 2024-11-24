@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 import { HotelContext } from "../../context/HotelContext";
 import CardHotel from "../CardHotel/CardHotel";
@@ -17,6 +17,11 @@ function HotelGrid() {
   const handlePageChange = ({ selected }) => {
     setCurrentPage(selected);
   };
+
+  // Resetar a página para 0 sempre que os hotéis filtrados mudarem
+  useEffect(() => {
+    setCurrentPage(0);
+  }, [filteredHotels]);
 
   return (
     <div className="max-w-7xl mx-auto p-6">

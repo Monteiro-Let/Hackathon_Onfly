@@ -13,7 +13,7 @@ export function HotelProvider({ children }) {
   useEffect(() => {
     async function fetchHotels() {
       try {
-        const response = await axios.get("https://api4squad.rydev.me/api/hotels");
+        const response = await axios.get("http://localhost:3000/api/hotels");
         setHotels(response.data);
         setFilteredHotels(response.data);
       } catch (error) {
@@ -32,7 +32,7 @@ export function HotelProvider({ children }) {
 
   function filterHotels({ category, city }) {
     setLoading(true); // Ative o estado de carregamento
-    let url = "https://api4squad.rydev.me/api/hotels";
+    let url = "http://localhost:3000/api/hotels";
   
     if (category) {
       url += `/category/${encodeURIComponent(category)}`;
