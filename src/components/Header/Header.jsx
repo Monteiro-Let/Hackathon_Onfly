@@ -4,7 +4,7 @@ function Header() {
 
     return (
         <header>
-            <nav className="bg-off_white w-screen p-7 flex justify-around shadow-md p-5">
+            <nav className="bg-off_white w-screen flex justify-around shadow-md p-2">
                 <div className="flex-shrink-0">
                     <img src={logo} />
                 </div>
