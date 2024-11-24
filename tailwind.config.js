@@ -7,6 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
+        font_dark_blue: '#192a3d',
+        white: '#ffffff',
         off_white: '#f4f9ff',
         light_blue: '#009efa',
         medium_blue: '#267ffa',
