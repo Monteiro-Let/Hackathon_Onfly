@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 import { createContext, useState, useEffect } from "react";
@@ -28,31 +27,45 @@ export function HotelProvider({ children }) {
   }, []);
 
   useEffect(() => {
-    filterHotels(filteredHotels);
+    console.log(filteredHotels);
   }, [filteredHotels]);
 
-  const filterHotels = (filters) => {
-    const { category, city } = filters;
-    let filtered = hotels;
-
-    //apply category filter
+  function filterHotels({ category, city }) {
+    setLoading(true); // Ative o estado de carregamento
+    let url = "https://api4squad.rydev.me/api/hotels";
+  
     if (category) {
-      filtered = filtered.filter((hotel) => hotel.category === category);
+      url += `/category/${encodeURIComponent(category)}`;
     }
-
-    //apply city filter
     if (city) {
-      filtered = filtered.filter((hotel) => hotel.city.toLowerCase().includes(city.toLowerCase()));
+      url += `/city/${encodeURIComponent(city)}`;
     }
-
-    setFilteredHotels(filtered);
-  };
-
-
+  
+    axios
+      .get(url)
+      .then((response) => {
+        setFilteredHotels(response.data);
+      })
+      .catch((error) => {
+        console.error("Erro ao buscar hotéis filtrados:", error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }
 
   return (
-    <HotelContext.Provider value={{ hotels, setHotels, filteredHotels, setFilteredHotels, loading }}>
-      {children}
-    </HotelContext.Provider>
+    <HotelContext.Provider
+  value={{
+    hotels,
+    setHotels,
+    filteredHotels,
+    setFilteredHotels,
+    loading,
+    filterHotels,
+  }}
+>
+  {children}
+</HotelContext.Provider>
   );
 };
