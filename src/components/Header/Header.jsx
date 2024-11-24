@@ -3,30 +3,9 @@ import logo from "../../assets/Logo-Onfly.png";
 function Header() {
     return (
         <header>
-<<<<<<< HEAD
             <nav className="bg-off_white w-full p-4 flex flex-col lg:flex-row items-center lg:justify-between shadow-md">
                 <div className="flex-shrink-0 mb-4 lg:mb-0">
                     <img src={logo} alt="Logo Onfly" className="h-15" />
-=======
-            <nav className="bg-off_white w-screen flex justify-around shadow-md p-2">
-                <div className="flex-shrink-0">
-                    <img src={logo} />
-                </div>
-                <div> 
-                </div>
-                <div className="flex items-center gap-4 sm:gap-6">
-                <div className=" text-dark_medium_blue">
-                    <select className="outline-none bg-off_white">
-                        <option value="">REDES HOTELEIRAS</option>
-                        <option value="1">Opção 1</option>
-                        <option value="2">Opção 2</option>
-                        <option value="3">Opção 3</option>
-                        <option value="4">Opção 4</option>
-                    </select>
-                </div>
-                <div>
-                    <button className="bg-orange px-4 py-2 rounded-full text-sm text-white hover:bg-hover_orange">Fale com Especialista</button>
->>>>>>> 85e02c811b45d9f82b5e78e9195f41eaa43cfb20
                 </div>
                 <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
                     <div className="text-dark_medium_blue w-full lg:w-auto">
