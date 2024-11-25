@@ -15,11 +15,8 @@
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
     "react-paginate": "^8.2.0",
-<<<<<<< HEAD
+    "react-router-dom": "^7.0.1",
     "reactjs-flip-card": "^2.0.3"
-=======
-    "react-router-dom": "^7.0.1"
->>>>>>> 2ab2fa1a1a819e2473b404d88de5cfb4d1c9531e
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",

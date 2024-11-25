@@ -4,9 +4,9 @@ import App from "../App";
 
 export function MainRoute () {
     return (
-        < Routes>
-         <Route path="/" element={App}></Route>
-         <Route path="/form" element={Form}></Route>
+        <Routes>
+            <Route path="/" element={<App />} />
+            <Route path="/form" element={<Form />} />
         </Routes>
-    )
+    );
 }
