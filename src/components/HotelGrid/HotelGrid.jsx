@@ -18,7 +18,6 @@ function HotelGrid() {
     setCurrentPage(selected);
   };
 
-  // Resetar a página para 0 sempre que os hotéis filtrados mudarem
   useEffect(() => {
     setCurrentPage(0);
   }, [filteredHotels]);
