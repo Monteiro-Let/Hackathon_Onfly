@@ -32,10 +32,7 @@ function Header() {
                     <div className="w-full lg:w-auto text-center">
                         <button
                             className="w-full lg:w-auto bg-orange px-4 py-2 rounded-full text-sm text-white hover:bg-hover_orange 
-                                       focus:ring-2 focus:ring-orange focus:outline-none transition"
-                        >
-                            Fale com Especialista
-                        </button>
+                                       focus:ring-2 focus:ring-orange focus:outline-none transition">Cadastre um Hotel</button>
                     </div>
                 </div>
             </nav>
