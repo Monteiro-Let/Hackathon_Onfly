@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import ReactFlipCard from "reactjs-flip-card";
 
-function CardHotel({ image, title, location, stars, description }) {
+function CardHotel({ image, title, location, stars, description, latitude, longitude }) {
   return (
     <ReactFlipCard
       containerStyle={{ width: "auto", height: "auto" }}
@@ -42,7 +42,6 @@ function CardHotel({ image, title, location, stars, description }) {
         <div className="bg-white rounded-lg shadow-lg p-4 flex flex-col justify-center items-center">
           <h3 className="text-lg font-bold text-gray-800 mb-2">{title}</h3>
 
-          {/* Área de texto rolável para a descrição */}
           <textarea
             className="w-full h-[235px] mt-10 p-2 text-sm text-gray-700 mb-4 border border-gray-300 rounded-md resize-none overflow-auto"
             value={description || "Descrição não disponível"}
@@ -51,7 +50,7 @@ function CardHotel({ image, title, location, stars, description }) {
 
           <a
             href={`https://www.google.com/maps?q=${encodeURIComponent(
-              location
+              `${latitude} ${longitude}`
             )}`}
             target="_blank"
             rel="noopener noreferrer"

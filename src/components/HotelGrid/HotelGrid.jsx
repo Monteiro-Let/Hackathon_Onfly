@@ -46,6 +46,8 @@ function HotelGrid() {
               location={`${hotel.city}, ${hotel.state} - ${hotel.country}`}
               stars={hotel.stars}
               description={hotel.description}
+              latitude={hotel.latitude}
+              longitude={hotel.longitude}
             />
           ))}
         </div>

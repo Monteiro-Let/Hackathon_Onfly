@@ -31,7 +31,7 @@ export function HotelProvider({ children }) {
   }, [filteredHotels]);
 
   function filterHotels({ category, city }) {
-    setLoading(true); // Ative o estado de carregamento
+    setLoading(true);
     let url = import.meta.env.VITE_API_URL;
   
     if (category) {
