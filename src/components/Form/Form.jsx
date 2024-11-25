@@ -29,7 +29,7 @@ function Form() {
     try {
       setLoading(true);
       await axios.post(
-        "https://hacka-pda-backend.onrender.com/api/hotels",
+        import.meta.env.VITE_API_URL,
         hotelData
       );
       alert("Hotel cadastrado com sucesso!");

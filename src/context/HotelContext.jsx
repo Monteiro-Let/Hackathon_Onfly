@@ -13,7 +13,7 @@ export function HotelProvider({ children }) {
   useEffect(() => {
     async function fetchHotels() {
       try {
-        const response = await axios.get("https://hacka-pda-backend.onrender.com/api/hotels");
+        const response = await axios.get(import.meta.env.VITE_API_URL);
         setHotels(response.data);
         setFilteredHotels(response.data);
       } catch (error) {
@@ -32,7 +32,7 @@ export function HotelProvider({ children }) {
 
   function filterHotels({ category, city }) {
     setLoading(true); // Ative o estado de carregamento
-    let url = "https://hacka-pda-backend.onrender.com/api/hotels";
+    let url = import.meta.env.VITE_API_URL;
   
     if (category) {
       url += `/category/${encodeURIComponent(category)}`;
